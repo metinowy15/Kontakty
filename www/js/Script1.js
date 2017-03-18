@@ -117,7 +117,7 @@ function dodawanieZdjecia() {
     function cameraError() {
         navigator.notification.alert("Wyst¹pi³ b³¹d", function () { }, "B³¹d :(", "ok");
     }
-
+    navigator.notification.alert("Wyst¹pi³ b³¹d w kamerze", function () { }, "B³¹d :(", "ok");
    navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
     
 

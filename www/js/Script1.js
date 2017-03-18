@@ -69,7 +69,7 @@ function dodajKontakt() {
     contact.phoneNumbers = phoneNumbers;
     if (czyWiecej == true) {
         
-
+        Zdjecie.addEventListener("click",dodawanieZdjecia());
         contact.nickname = Nick.value;
        var emails = [];
        emails[0] = new ContactField(Email.value);
@@ -102,6 +102,11 @@ function aktywacja() {
         Rozszerzenie.innerHTML = "Dodatkowe opcje";
     }
     console.log(Ukryty.classList.item(2));
+
+}
+function dodawanieZdjecia(){
+
+
 
 }
 

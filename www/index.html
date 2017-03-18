@@ -12,25 +12,85 @@
     <script src="cordova.js"></script>
 </head>
 <body>
-    <div class="pojemnik">
-        <h3>
-            <input id="Imie" type="text" />  <label title="Imie"/>
-        </h3>
 
-        <h3>
-            <input id="Telefon" type="text" /> <label title="Numer Telefonu" />
-        </h3>
+  <div id="ListaKontaktow" data-role="page">
 
-        <h3>
-            <input type="submit" value="Dodaj" onclick="dodajKontakt()" />
-        </h3>
+      <div class="naglowek header">
 
+          <a href="#DodajKontakt" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" role="button">Dodaj Kontakt</a>
+          <a href="#ListaKontaktow" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" role="button">Pokaż Kontakty</a>
+
+      </div>
+
+  </div>
+
+    <div id="DodajKontakt" data-role="page">
+        <div class="naglowek header">
+
+           <a href="#DodajKontakt" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" role="button">Dodaj Kontakt</a>
+           <a href="#ListaKontaktow" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" role="button">Pokaż Kontakty</a>
+
+        </div>
+        <div data-role="main" class="pojemnik ui-content">
+            <h3>
+                Imie
+                <input id="Imie" type="text" />
+            </h3>
+
+            <h3>
+                Nazwisko
+                <input id="Nazwisko" type="text" />
+            </h3>
+
+            <h3>
+                Numer Telefonu
+                <input id="Telefon" type="text" />
+            </h3>
+
+            <div" id="Ukryty" class="wylaczony">
+
+                <h3>
+                    Nick
+                    <input id="Nick" type="text" />
+                </h3>
+
+                <h3>
+                    Email
+                    <input id="Email" type="text" />
+                </h3>
+
+                <h3>
+                    Adres
+                    <input id="Adres" type="text" />
+                </h3>
+
+                <h3>
+                    Zdjęcie (Nacisnij żeby dodać)              
+                </h3>
+                 <div id="Zdjecie"></div>
+
+
+
+
+            </div">
+
+            <h3>
+                <input type="submit" value="Dodaj" class="info" onclick="dodajKontakt()" />
+            </h3>
+          
+                <div id="Rozszerzenie" class="btn info" role="button">Dodatkowe opcje</div>
+         
+
+
+        </div>
+        <div>
+
+
+            <h3 id="Poprawnosc"></h3>
+
+        </div>
     </div>
-    <div>
 
 
-        <h3 id="Poprawnosc"></h3>
-
-    </div>
 </body>
 </html>

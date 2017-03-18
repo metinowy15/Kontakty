@@ -1,11 +1,56 @@
 ﻿body
 {
-      
+ 
 }
+
 .pojemnik{
     margin: 0 auto;
     width:300px;
+   
+    text-align:center;
   
 
 
+}
+.naglowek{
+    text-align:center;
+
+   
+}
+#Zdjecie{
+
+margin: 0 auto;
+
+
+width:100px;
+height:100px;
+border:solid black 2px;
+border-radius:50px;
+
+
+}
+#ukryty{
+    height:0px;
+
+}
+.wylaczony{
+    display:none;
+
+}
+.aktywny{
+    display:block;
+}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
 }

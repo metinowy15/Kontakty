@@ -74,8 +74,8 @@ function dodajKontakt() {
        // var emails = [];
        // emails[0] = new ContactField(Email.value);
        // contact.emails = emails;
-        var addresses = [];
-        addresses = new ConctactField("home", Adres.value, true);
+        //var addresses = [];
+        //addresses = new ConctactField("home", Adres.value, true);
         contact.save(onSuccess, onError);
 
 

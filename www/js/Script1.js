@@ -106,7 +106,18 @@ function aktywacja() {
 }
 function dodawanieZdjecia(){
 
+    function cameraSuccess(imageData) {
 
+        var image = document.getElementById("NoweZdjecie");
+        image.src = "data:image/jpeg;base64," + imageData;
+
+    }
+    function cameraError() {
+        navigator.notification.alert("Wyst¹pi³ b³¹d", function () { }, "B³¹d :(", "ok");
+    }
+
+    navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
+    
 
 }
 

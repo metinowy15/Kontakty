@@ -29,6 +29,7 @@ function startStrony(){
     Rozszerzenie = document.getElementById("Rozszerzenie");
     window.addEventListener("deviceready", start);
     Rozszerzenie.addEventListener("click", aktywacja);
+    Zdjecie.addEventListener("click", dodawanieZdjecia);
 
 
 }
@@ -69,7 +70,7 @@ function dodajKontakt() {
     contact.phoneNumbers = phoneNumbers;
     if (czyWiecej == true) {
         
-        Zdjecie.addEventListener("click",dodawanieZdjecia());
+       
         contact.nickname = Nick.value;
        var emails = [];
        emails[0] = new ContactField(Email.value);
@@ -104,7 +105,8 @@ function aktywacja() {
     console.log(Ukryty.classList.item(2));
 
 }
-function dodawanieZdjecia(){
+function dodawanieZdjecia() {
+    
 
     function cameraSuccess(imageData) {
 
@@ -116,7 +118,7 @@ function dodawanieZdjecia(){
         navigator.notification.alert("Wyst¹pi³ b³¹d", function () { }, "B³¹d :(", "ok");
     }
 
-    navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
+   navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
     
 
 }

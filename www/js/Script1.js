@@ -12,6 +12,7 @@ let Poprawnosc;
 let Ukryty;
 let Rozszerzenie;
 let czyWiecej = false;
+let tmp = 0;
 
 function startStrony(){
     //pola z danymi
@@ -85,14 +86,19 @@ function dodajKontakt() {
 }
 function aktywacja() {
 
-    
+    if (tmp == 0) {
+        tmp = 1;
+        czyWiecej = true;
+    } else {
+        czyWiecej = false;
+        tmp = 0;
+    }
     var Ukryty = document.getElementById("Ukryty");
     Ukryty.classList.toggle("aktywny");
     if (Ukryty.className.includes("aktywny"[2])) {
-        czyWiecej = true;
+       
         Rozszerzenie.innerHTML = "Podstawowe opcje"
     } else {
-        czyWiecej = false;
         Rozszerzenie.innerHTML = "Dodatkowe opcje";
     }
     console.log(Ukryty.classList.item(2));

@@ -70,9 +70,9 @@ function dodajKontakt() {
         
 
         contact.nickname = Nick.value;
-        var emails = [];
-        emails[0] = new ContactField(Email.value);
-        contact.emails = emails;
+       // var emails = [];
+       // emails[0] = new ContactField(Email.value);
+       // contact.emails = emails;
         var addresses = [];
         addresses = new ConctactField("home", Adres.value, true);
         contact.save(onSuccess, onError);

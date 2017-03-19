@@ -120,17 +120,11 @@ function dodawanieZdjecia() {
        
     }
 
-    function onPhotoURISuccess(imageURI) {
-
-   
-        largeImage.src = imageURI;
-
-    }
     function cameraError() {
         navigator.notification.alert("Wyst¹pi³ b³¹d", function () { }, "B³¹d :(", "ok");
     }
     
-    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,destinationType: destinationType.DATA_URL });
+    navigator.camera.getPicture(onPhotoDataSuccess, cameraError, { quality: 50,destinationType: destinationType.DATA_URL });
 
     
 

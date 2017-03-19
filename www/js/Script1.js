@@ -13,6 +13,8 @@ let Ukryty;
 let Rozszerzenie;
 let czyWiecej = false;
 let tmp = 0;
+let pictureSource;
+let destinationType;
 
 function startStrony(){
     //pola z danymi
@@ -36,7 +38,8 @@ function startStrony(){
 function start(){
 
 
-
+    pictureSource = navigator.camera.PictureSourceType;
+    destinationType = navigator.camera.DestinationType;
 
 
 }
@@ -107,18 +110,28 @@ function aktywacja() {
 }
 function dodawanieZdjecia() {
     
-
-    function cameraSuccess(imageData) {
+    function onPhotoDataSuccess(imageData) {
 
         var image = document.getElementById("NoweZdjecie");
-        image.src = "data:image/jpeg;base64," + imageData;
+
+        image.style.display = 'block';
+
+       image.src = "data:image/jpeg;base64," + imageData;
+       
+    }
+
+    function onPhotoURISuccess(imageURI) {
+
+   
+        largeImage.src = imageURI;
 
     }
     function cameraError() {
         navigator.notification.alert("Wyst¹pi³ b³¹d", function () { }, "B³¹d :(", "ok");
     }
-    navigator.notification.alert("Wyst¹pi³ b³¹d w kamerze", function () { }, "B³¹d :(", "ok");
-   navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
+    
+    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,destinationType: destinationType.DATA_URL });
+
     
 
 }
